@@ -25,7 +25,7 @@ public class CategoryServiceImpl implements CategoryService {
 	public Category getById(String categoryId) {
 		Category category = categoryRepository.getById(categoryId);
 		if(null==category) {
-			throw new NotFoundException();
+			throw new NotFoundException("Category Not Found");
 		}
 		return category;
 	}
