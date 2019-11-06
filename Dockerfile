@@ -9,5 +9,5 @@ COPY ./src ./src
 RUN mvn install -Dmaven.test.skip=true
 
 FROM base AS final
-COPY --from=maven target/products-api-1.0.0-SNAPSHOT.jar ./
-ENTRYPOINT ["java", "-jar", "products-api-1.0.0-SNAPSHOT.jar"]
+COPY --from=maven target/categories-api-1.0.0-SNAPSHOT.jar ./
+ENTRYPOINT ["java", "-jar", "categories-api-1.0.0-SNAPSHOT.jar"]
