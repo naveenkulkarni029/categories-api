@@ -1,4 +1,4 @@
-FROM openjdk:8u171-jre-alpine AS base
+FROM openjdk:8u232-jre AS base
 WORKDIR /product-api
 EXPOSE 8080
 
