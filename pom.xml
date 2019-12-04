@@ -47,7 +47,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.philips.airadiology.eventtrigger.CategoriesApiApplication</mainClass>
+					<mainClass>org.nbk.categories.CategoriesApiApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
