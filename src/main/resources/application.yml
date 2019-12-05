@@ -1,6 +1,6 @@
 server:
-    port: 8083
+  port: 8083
 spring:
-    data:
-        mongodb:
-          uri: mongodb://test:Test123@mongodb.default.svc.cluster.local/OSC
+  data:
+    mongodb:
+      uri: mongodb://test:Test123@mongodb.default.svc.cluster.local/OSC
