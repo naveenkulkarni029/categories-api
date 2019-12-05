@@ -1,6 +1,6 @@
 FROM openjdk:8u232-jre AS base
 WORKDIR /categories-api
-EXPOSE 8083
+EXPOSE 8080
 
 FROM maven:3.5-jdk-8 as maven
 COPY ./pom.xml ./pom.xml
