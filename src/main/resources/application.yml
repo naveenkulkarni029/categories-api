@@ -3,6 +3,4 @@ server:
 spring:
     data:
         mongodb:
-            database: OSC
-            host: localhost
-            port: 27017
+          uri: mongodb://test:Test123@mongodb.default.svc.cluster.local/OSC
