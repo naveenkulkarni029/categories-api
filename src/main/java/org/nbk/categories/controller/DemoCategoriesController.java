@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Profile(value="prod")
+@Profile(value="demo")
 @RequestMapping(value = "/api/v1/category")
 public class DemoCategoriesController {
 
