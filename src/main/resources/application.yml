@@ -1,6 +1,9 @@
 server:
   port: 8080
 spring:
+  profiles:
+    active:
+    - ${envName}
   data:
     mongodb:
       uri: mongodb://test:Test123@mongodb.default.svc.cluster.local/OSC
