@@ -1,9 +1,74 @@
+spring:
+  profiles: default
+  application:
+    name: categories-api
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: categories-db
 server:
   port: 8080
+  
+---
 spring:
-  profiles:
-    active:
-    - ${envName}
+  profiles: dev
+  application:
+    name: categories-api
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: categories-dev-db
+server:
+  port: 8080
+
+---
+spring:
+  profiles: sit
+  application:
+    name: categories-api
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: categories-sit-db
+server:
+  port: 8080
+
+---
+spring:
+  profiles: uat
+  application:
+    name: categories-api
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: categories-uat-db
+server:
+  port: 8080
+  
+---
+spring:
+  profiles: pat
+  application:
+    name: categories-api
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: categories-pat-db
+server:
+  port: 8080
+
+---
+spring: 
+  profiles: prod
+  application:
+    name: categories-api
   data:
     mongodb:
       uri: mongodb://test:Test123@mongodb.default.svc.cluster.local/OSC
+server: 
+  port: 8080

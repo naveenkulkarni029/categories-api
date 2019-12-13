@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Profile(value="demo")
+@Profile(value="default")
 @RequestMapping(value = "/api/v1/category")
-public class DemoCategoriesController {
+public class DefaultCategoriesController {
 
 	@Autowired
 	private CategoryService categoryService;
