@@ -36,7 +36,7 @@ public class DefaultCategoriesController {
 		return ResponseEntity.ok(category);
 	}
 
-	@GetMapping(value = "/categories", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Category>> findAll() {
 		List<Category> categories = categoryService.findAll();
 		return ResponseEntity.created(null).body(categories);
