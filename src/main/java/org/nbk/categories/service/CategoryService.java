@@ -8,7 +8,7 @@ public interface CategoryService {
 
 	public Category save(Category category);
 
-	public Category getById(String categoryId);
+	public Category getById(String categoryId) throws Exception;
 
 	public List<Category> findAll();
 

@@ -31,7 +31,7 @@ public class ProductionCategoriesController {
 	}
 
 	@GetMapping(value = "/{categoryId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Category> getById(@PathVariable String categoryId) {
+	public ResponseEntity<Category> getById(@PathVariable String categoryId) throws Exception {
 		Category category = categoryService.getById(categoryId);
 		return ResponseEntity.ok(category);
 	}

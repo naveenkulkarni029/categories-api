@@ -8,7 +8,10 @@ spring:
       port: 27017
       database: categories-db
 server:
-  port: 8080
+  host: http://localhost
+  port: 8083
+  servlet:
+    context-path: /api/v1/category
   
 ---
 spring:
@@ -21,7 +24,10 @@ spring:
       port: 27017
       database: categories-dev-db
 server:
-  port: 8080
+  host: http://localhost
+  port: 8083
+  servlet:
+    context-path: /api/v1/category
 
 ---
 spring:
@@ -34,8 +40,10 @@ spring:
       port: 27017
       database: categories-sit-db
 server:
-  port: 8080
-
+  host: http://localhost
+  port: 8083
+  servlet:
+    context-path: /api/v1/category
 ---
 spring:
   profiles: uat
@@ -60,7 +68,10 @@ spring:
       port: 27017
       database: categories-pat-db
 server:
-  port: 8080
+  host: http://localhost
+  port: 8083
+  servlet:
+    context-path: /api/v1/category
 
 ---
 spring: 
@@ -71,4 +82,7 @@ spring:
     mongodb:
       uri: mongodb://test:Test123@mongodb.default.svc.cluster.local/OSC
 server: 
+  host: http://categories-api.default.svc.cluster.local
   port: 8080
+  servlet:
+    context-path: /api/v1/category
