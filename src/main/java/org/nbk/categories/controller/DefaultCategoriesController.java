@@ -12,18 +12,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Profile(value="default")
+@Profile(value = "default")
 public class DefaultCategoriesController {
 
 	@Autowired
 	private CategoryService categoryService;
 
 	@PostMapping(value = "/save", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	
+
 	public ResponseEntity<Category> save(@RequestBody Category category) {
 		Category savedCategory = categoryService.save(category);
 		return ResponseEntity.created(null).body(savedCategory);
