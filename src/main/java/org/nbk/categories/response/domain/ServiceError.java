@@ -1,32 +1,20 @@
 package org.nbk.categories.response.domain;
 
-import org.springframework.http.HttpStatus;
-
 public class ServiceError {
 
-	private Integer httpStatusCode;
-	private HttpStatus httpStatus;
+	private String httpStatus;
 	private String message;
 
-	public ServiceError(HttpStatus httpStatus, String message) {
-		super();
-		// this.httpStatusCode = httpStatusCode;
+	public ServiceError(String httpStatus, String message) {
 		this.httpStatus = httpStatus;
 		this.message = message;
-		this.httpStatusCode = getHttpStatusCode();
-	}
 
-	public ServiceError(Integer httpStatusCode, HttpStatus httpStatus, String message) {
-		super();
-		this.httpStatusCode = httpStatusCode;
-		this.httpStatus = httpStatus;
-		this.message = message;
 	}
 
 	/**
 	 * @return the httpStatus
 	 */
-	public HttpStatus getHttpStatus() {
+	public String getHttpStatus() {
 		return httpStatus;
 	}
 
@@ -34,7 +22,7 @@ public class ServiceError {
 	 * @param httpStatus
 	 *            the httpStatus to set
 	 */
-	public void setHttpStatus(HttpStatus httpStatus) {
+	public void setHttpStatus(String httpStatus) {
 		this.httpStatus = httpStatus;
 	}
 
@@ -53,24 +41,6 @@ public class ServiceError {
 		this.message = message;
 	}
 
-	/**
-	 * @return the httpStatusCode
-	 */
-	public Integer getHttpStatusCode() {
-		if (null == httpStatusCode) {
-			setHttpStatusCode(httpStatus.value());
-		}
-		return httpStatusCode;
-	}
-
-	/**
-	 * @param httpStatusCode
-	 *            the httpStatusCode to set
-	 */
-	public void setHttpStatusCode(Integer httpStatusCode) {
-		this.httpStatusCode = httpStatusCode;
-	}
-
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -80,8 +50,6 @@ public class ServiceError {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("ServiceError [httpStatusCode=");
-		builder.append(httpStatusCode);
-		builder.append(", httpStatus=");
 		builder.append(httpStatus);
 		builder.append(", message=");
 		builder.append(message);
