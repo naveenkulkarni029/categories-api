@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class CategoriesControllerAdvice {
-	
-	@ExceptionHandler(value= {NotFoundException.class})
-	public ResponseEntity<ServiceError> handleServiceError(NotFoundException exception) {
-		ServiceError serviceError = new ServiceError(HttpStatus.NOT_FOUND.toString(), exception.getMessage(), exception.getUri());
-		return new ResponseEntity<ServiceError>(serviceError, HttpStatus.NOT_FOUND);
-		}
-	
 
+	@ExceptionHandler(value = { NotFoundException.class })
+	public ResponseEntity<ServiceError> handleServiceError(NotFoundException exception) {
+		ServiceError serviceError = new ServiceError(HttpStatus.NOT_FOUND.toString(), exception.getMessage(),
+				exception.getUri());
+		return new ResponseEntity<ServiceError>(serviceError, HttpStatus.NOT_FOUND);
+	}
 }

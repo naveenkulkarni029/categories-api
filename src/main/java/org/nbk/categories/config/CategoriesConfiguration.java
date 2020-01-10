@@ -19,5 +19,4 @@ public class CategoriesConfiguration {
 		MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory, converter);
 		return mongoTemplate;
 	}
-	
 }
