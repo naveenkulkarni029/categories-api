@@ -1,4 +1,4 @@
-package org.nbk.categories;
+/*package org.nbk.categories;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,3 +14,4 @@ public class CategoriesApiApplicationTests {
 	}
 
 }
+*/
